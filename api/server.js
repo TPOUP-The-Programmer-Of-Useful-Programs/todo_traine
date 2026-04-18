@@ -52,13 +52,15 @@ app.post('/tarefas', async function (req, res) {
     ]);
 
     res.status(201).json({ data});
+    
 });
 
-app.put('/tarefas', function (req, res){
+app.put('/tarefas/:id', function (req, res){
+    const { id } = req.params
     res.json([]);
 })
 
-app.delete('/tarefas', function (req, res){
+app.delete('/tarefas/:id', function (req, res){
     res.json([]);
 })
 
